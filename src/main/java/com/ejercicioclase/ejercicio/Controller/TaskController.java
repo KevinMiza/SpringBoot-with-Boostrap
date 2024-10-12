@@ -37,8 +37,8 @@ public class TaskController {
     }
 
     @DeleteMapping("/{task}")
-    public ResponseEntity<Void> deleteTask(@PathVariable String title) {
-        taskService.deleteTask(title);
+    public ResponseEntity<Void> deleteTask(@PathVariable String task) {
+        taskService.deleteTask(task);
         return ResponseEntity.noContent().build();
     }
 }
